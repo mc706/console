@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" data-ng-app="console">
+<head>
+    <meta charset="UTF-8">
+    <title>MC706 - Console</title>
+    <link href="/assets/css/console.css" rel="stylesheet">
+    <script src="/assets/js/angular.min.js"></script>
+    <script src="/assets/js/jquery-1.7.2.min.js"></script>
+    <script src="/assets/app.js"></script>
+</head>
+<body ng-cloak>
+<div ng-controller="ConsoleCtrl">
+    <div class="line>">
+        <span class="comment">// Welcome to mc706's console. type </span><span class="keyword">help</span><span class="comment"> to continue</span>
+    </div>
+    <div class="line" ng-repeat="line in lines | limitTo:limitRows()">
+        <span class="general" ng-show="line.input">>>></span><span ng-repeat="section in line.sections" ng-class="section.class">{{ section.content }}</span>
+    </div>
+    <div class="line">
+        <span class="general">>>></span><span ng-repeat="section in active" ng-class="section.class">{{ section.content }}</span><span class="cursor" ng-class="checkSpace()"></span>
+    </div>
+    <textarea id="inputline" name=input ng-model="activeInput" class="hidden-input" autofocus ng-keyup="parseInput($event)" ng-keydown="autocomplete($event)"></textarea>
+</div>
+</body>
+</html>

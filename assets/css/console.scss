@@ -1,0 +1,89 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: #333;
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #272822;
+}
+
+.line {
+  width: 100%;
+  float: left;
+  display: block;
+  span {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.cursor {
+  width: 10px;
+  height: 14px;
+  background-color: #F8F8F2;
+  margin: 4px 0 0 -10px;
+}
+
+.cursor.space {
+  width: 10px;
+  height: 14px;
+  background-color: #F8F8F2;
+  margin: 4px 0 0 0;
+}
+
+.general {
+  color: #F8F8F2;
+}
+
+.literal {
+  color: #F8F8F2;
+  white-space: pre;
+}
+
+.keyword {
+  font-weight: bold;
+  color: #F92672;
+}
+
+.matrix {
+  margin-right: 0 !important;
+  white-space: pre;
+  width:8px;
+}
+.matrix.lead {
+    color: yellow !important;
+  }
+.matrix.tail {
+    color: yellowgreen !important;
+  }
+.comment {
+  color: #75715E;
+}
+
+.string {
+  color: #E6DB74;
+}
+
+.directory {
+  color: lightseagreen;
+}
+
+.error {
+  color: red;
+}
+
+.hidden-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: transparent;
+}

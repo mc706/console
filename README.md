@@ -28,6 +28,7 @@ Currently the page has code highlighting, tab completion, and a basic list of co
 * search
 * exit
 * reload
+* tree
 
 Live Demo
 ---------
